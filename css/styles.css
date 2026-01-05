@@ -4,6 +4,7 @@
   --color-secondary: #1d1d1d;
   --color-shadow: #4c5d5a;
   --text-primary: #fcf4f4;
+  --outline-color: rgba(255, 255, 255, 0.1);
 }
 
 *,
@@ -18,11 +19,10 @@ html {
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.5;
   font-size: 2.4rem;
-  color: var(--color-primary);
+  color: #fff;
 }
 
 h1,
@@ -66,6 +66,18 @@ p {
   }
 }
 
+li {
+  list-style: none;
+}
+
+.gloss {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2),
+    inset 0 1px 1px rgba(255, 255, 255, 0.25);
+  background: var(--outline-color);
+}
+
 /* Links */
 a {
   text-decoration: none;
@@ -78,32 +90,71 @@ a:hover {
 
 /* Buttons  */
 .btn {
-  padding: 1rem 1.8rem;
-  color: #fff;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  background: rgba(255, 255, 255, 0.10);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2),
-    inset 0 1px 1px rgba(255, 255, 255, 0.25);
   font-size: 1.5rem;
+  padding: 1rem 2.5rem;
+  border-radius: 8px;
   cursor: pointer;
   font-weight: 600;
+  transition: transform 0.4s ease, background 0.3s, color 0.4s;
+}
+
+.btn--outline {
+  color: #fff;
 }
 
 .btn--solid {
-    background: #fff;
-    color: var(--color-primary);
+  background: #fff;
+  color: var(--color-primary);
 }
 
-.btn--small {
-  padding: 0.5rem 1.8rem;
+.btn:hover {
+  transform: scale(1.08);
+}
+
+.btn--solid:hover {
+  background: #ffffffed;
+}
+
+.btn--outline:hover {
+  background: rgba(255, 255, 255, 0.212);
+}
+
+.fa-play {
+  padding-right: 2rem;
+}
+
+/* call outs */
+.callout {
+  color: #fff;
+  padding: 0.5rem 1.5rem;
   border-radius: 999px;
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-size: 1.1rem;
+  font-weight: 700;
   transition: border 0.3s;
 }
 
-.btn--small:hover {
+.callout:hover {
   border: 1px solid var(--color-accent);
+}
+
+/* Navigation-Bar */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem;
+  align-items: center;
+  margin: 0;
+  border: 0;
+}
+
+.nav__list {
+  display: flex;
+  width: auto;
+}
+
+.nav__item {
+  padding: 0.5rem 3rem;
+  /* border-bottom: 2px solid #222; */
 }
