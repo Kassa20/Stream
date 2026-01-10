@@ -14,7 +14,6 @@ arrows.forEach((arrow, i) => {
             movieLists[i].style.transform = "translateX(0)";
             clickCounter = 0;
         }
-
     })
 })
 
