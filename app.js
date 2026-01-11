@@ -43,7 +43,7 @@ fetch('https://api.themoviedb.org/3/trending/movie/day?language=en-US', options)
         const rating = item.vote_average;
         const poster = item.poster_path;
         const movie = `<div class="card" style="background-image: url(https://image.tmdb.org/t/p/w500${poster});">
-                            <span class="title">${title}</span>
+                            <span class="title gloss">${title}</span>
                             <span class="rating gloss"><i class="fa-solid fa-star"></i>${Math.round(rating * 10) / 10}/10</span>
                         </div>`
         document.getElementById("featured").innerHTML += movie;
@@ -65,7 +65,7 @@ fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', opti
         const rating = item.vote_average;
         const poster = item.poster_path;
         const movie = `<div class="card" style="background-image: url(https://image.tmdb.org/t/p/w500${poster});">
-                            <span class="title">${title}</span>
+                            <span class="title gloss">${title}</span>
                             <span class="rating gloss"><i class="fa-solid fa-star"></i>${Math.round(rating * 10) / 10}/10</span>
                         </div>`
         document.getElementById("top").innerHTML += movie;
@@ -77,6 +77,7 @@ fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', opti
   .catch(err => console.error(err));
 
 
+// TV-top
 fetch('https://api.themoviedb.org/3/tv/top_rated?language=en-US&page=1', options)
   .then(res => res.json())
   .then(data => {
@@ -87,7 +88,7 @@ fetch('https://api.themoviedb.org/3/tv/top_rated?language=en-US&page=1', options
         const rating = item.vote_average;
         const poster = item.poster_path;
         const movie = `<div class="card" style="background-image: url(https://image.tmdb.org/t/p/w500${poster});">
-                            <span class="title">${title}</span>
+                            <span class="title gloss">${title}</span>
                             <span class="rating gloss"><i class="fa-solid fa-star"></i>${Math.round(rating * 10) / 10}/10</span>
                         </div>`
         document.getElementById("tv").innerHTML += movie;
