@@ -29,13 +29,25 @@
         </li>
       </ul>
     </nav>
-    <section class="search-section">
-      <h2>Search For your Favorite Movies</h2>
-      <div class="search gloss">
-        <input type="text" class="search-input" placeholder="search..." />
-        <button class="btn btn--accent">Search</button>
-      </div>
-    </section>
+    <div class="search-content">
+      <section class="search-section">
+        <h2>Search For your Favorite Movies</h2>
+        <div class="search gloss">
+          <input type="text" class="search-input" placeholder="search..." />
+          <button class="btn btn--accent" id="search-button">Search</button>
+        </div>
+      </section>
+      <section class="search-result-section">
+        <div class="search-result-container">
+          <div class="search-item">
+            <img class="search-image" src="images/15.jpg" alt="" />
+            <span class="search-title gloss">Title</span>
+            <span class="search-rating gloss">Rating</span>
+          </div>
+        </div>
+      </section>
+    </div>
+
     <script src="app.js"></script>
   </body>
 </html>

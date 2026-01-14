@@ -101,8 +101,10 @@ fetch('https://api.themoviedb.org/3/tv/top_rated?language=en-US&page=1', options
   .catch(err => console.error(err));
 
 
+
+const TOKEN = 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwNTJiMDE3MzNlMjZiOGViZGFmYjg3NWY3NzMxYmQyMSIsIm5iZiI6MTc2ODEwNzUyMC4xMTEsInN1YiI6IjY5NjMyZTAwNjg3YTM5ODc0YTE3MWI4NiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.lfngcNeX3q8L7U1YZlDlQeZ766J5XdLP83kPH_cNt78'
 // search
-fetch('https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&page=1', options)
-  .then(res => res.json())
-  .then(res => console.log(res))
-  .catch(err => console.error(err));
+
+const input = document.querySelector(".search-input")
+const button = document.getElementById("search-button")
+const elements = 
