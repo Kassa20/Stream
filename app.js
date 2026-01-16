@@ -5,11 +5,15 @@ function arrowLogic() {
 
     arrows.forEach((arrow, i) => {
         const itemNumber = movieLists[i].querySelectorAll(".card").length;
-        console.log(itemNumber);
         let clickCounter = 0;
+        if(itemNumber){
+            console.log(itemNumber);
+        }
         arrow.addEventListener("click", () => {
             clickCounter++;
-            if (itemNumber - (3 + clickCounter) > 0) {
+            console.log(clickCounter);
+            // console.log(clickCounter);
+            if (itemNumber - (6 + clickCounter) > 0) {
                 movieLists[i].style.transform = `translateX(${
                     movieLists[i].computedStyleMap().get("transform")[0].x.value - 300}px)`
             }
@@ -51,7 +55,7 @@ fetch('https://api.themoviedb.org/3/trending/movie/day?language=en-US', options)
     })
 
     arrowLogic();
-
+    
   })
   .catch(err => console.error(err));
 
