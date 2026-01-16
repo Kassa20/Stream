@@ -357,8 +357,6 @@ a:hover {
 .search-item {
   min-width: 250px;
   height: 35rem;
-  align-items: center;
-  justify-content: center;
   position: relative;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
